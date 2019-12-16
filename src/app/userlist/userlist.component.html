@@ -1,0 +1,21 @@
+<div class="container pt-3 pb-2">
+
+    <h3>MENU JAJANAN</h3>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">NAMA</th>
+                <th scope="col">FOTO</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="food != null">
+            <tr *ngFor="let fd of food.result.kantin" routerLink="./{{fd.kode}}">
+                <th scope="row">{{fd.kode}}</th>
+                <td>{{fd.nama}}</td>
+                <td>{{fd.foto}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

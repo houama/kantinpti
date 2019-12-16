@@ -1,0 +1,56 @@
+@import '../../../app.component.scss';
+@import url("https://fonts.googleapis.com/css?family=Calistoga");
+
+* {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-trans {
+  background: black;
+}
+
+.aligner {
+  width: 50px;
+  padding: 5px;
+  margin: 0 0 0 1rem;
+}
+
+.fa-arrow-left {
+  margin: 0 0 0 1rem;
+  border-radius: 50%;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  color: #ffffff;
+  transition: ease-out 0.3s;
+}
+
+.fa-arrow-left:hover {
+  background-color: rgb(255, 153, 0);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: ease-in 0.3s;
+}
+
+.btn {
+  font-size: 15px;
+  height: 3rem;
+  width: 7.5rem;
+  margin: 0 10px;
+  color: white;
+  border-color: transparent;
+
+  :hover {
+    width: 5rem;
+  }
+}
+
+.navbar {
+  height: 10vh;
+  background-color: rgb(255, 153, 0);
+}

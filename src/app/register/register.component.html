@@ -1,0 +1,55 @@
+
+<div class="login-form">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <h2 class="text-center"> Register </h2>
+
+      <!-- Register Username -->
+      <div class="form-group">
+          <input type="text" class="form-control" formControlName="user_name" placeholder="Username">
+          <div class="alert alert-danger" *ngIf="user_name.invalid && user_name.dirty" @myInsertRemoveTrigger>Username Must Be filled</div>
+      </div>
+
+      <!-- Register Nama Lengkap -->
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="nama_lengkap" placeholder="fullname">
+        <div class="alert alert-danger" *ngIf="fullname.invalid && fullname.dirty" @myInsertRemoveTrigger> Please fill your complete name here</div>
+      </div>
+
+      <!-- Register Alamat -->
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="alamat" placeholder="alamat">
+        <div class="alert alert-danger" *ngIf="fullname.invalid && fullname.dirty" @myInsertRemoveTrigger> Please fill your complete name here</div>
+      </div>
+      <!-- Register Nomor Telepon -->
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="telepon" placeholder="telepon">
+      </div>
+
+    <!-- Register Email -->
+    <div class="form-group">
+      <input type="text" class="form-control" formControlName="email" placeholder="email">
+    </div>
+
+    <!-- Register Tanggal Lahir -->
+    <div class="form-group">
+      <input type="date" class="form-control" formControlName="tanggal_lahir" placeholder="birthdate">
+    </div>
+
+    <!-- Register Foto -->
+    <div class="form-group">
+      <input type="text" class="form-control" formControlName="foto" placeholder="link foto-profil">
+    </div>
+
+    <!-- Register Password -->
+    <div class="form-group">
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+      <div class="alert alert-danger" *ngIf="password.invalid && password.dirty" @myInsertRemoveTrigger>Password Must Be filled</div>
+  </div>
+
+
+    <!-- Button shit -->
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!registerForm.valid"> Register </button>
+      </div>
+  </form>
+</div>

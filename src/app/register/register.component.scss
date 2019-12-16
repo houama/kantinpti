@@ -1,0 +1,52 @@
+.login-form {
+  width: 50%;
+  margin: 50px auto;
+
+  form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    font-size: 14px;
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+    }
+
+    .ng-invalid {
+      border-left: solid red 4px;
+      transition: all 0.5s;
+    }
+  }
+
+  h2 {
+    margin: 2rem 0;
+    font-size: 30px;
+  }
+
+  .form-control,
+  .btn {
+    min-height: 3rem;
+    border-radius: 5px;
+  }
+  .btn {
+    font-size: 15px;
+    font-weight: bold;
+    transition: 2s;
+  }
+
+  .btn[disabled] {
+    background-color: grey;
+  }
+
+  .alert {
+    margin: 5px 0;
+    transition: all 0.5s;
+  }
+}
+
+input.ng-valid {
+  border-left: solid green 4px;
+  transition: all 0.5s;
+}
