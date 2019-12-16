@@ -1,0 +1,6 @@
+<div class="container-fluid pt-3 pb-3">
+    <p>Ini halaman detailnya khusus untuk ::</p>
+    {{ food.result.kode }} ||  Rp.{{ food.result.harga }} || {{ food.result.deskripsi }}
+    <img src="{{food.result.foto}}" style="width: 300px; height: auto">
+    <td><button type="button" (click) = "addtoFavorite(food.result.nama)">Add To Favorit</button></td>
+</div>

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-toogleable-sm navbar-trans text-center">
+  <div class="col-1">
+    <a class="back pull-left " [@inAndOut] *ngIf="route.url != '/homepage' && route.url != '/'" (click)="cancel()"><i
+        class="fas fa-2x fa-arrow-left"></i></a>
+  </div>
+  <div class="col-5">
+    <a class="title" (click)='onClick()'>Canteen UMN</a>
+  </div>
+  <div class="col-3" *ngIf="logStat == false && route.url != '/login'">
+    <button class="btn btn-outline-primary " [@inAndOut] (click)="logIn()"
+      *ngIf="logStat == false && route.url != '/login'">Log in</button>
+    <button class="btn btn-outline-primary " [@inAndOut] (click)="registerUser()"
+      *ngIf="route.url != '/login'">Register</button>
+  </div>
+  <div class="col-3" *ngIf="route.url == '/login'">
+    <button class="btn btn-outline-primary " [@inAndOut] (click)="registerUser()">Register</button>
+  </div>
+  <div class="col-3" *ngIf="logStat == true">
+    <button class="btn btn-outline-primary " [@inAndOut] (click)="logOut()">Log Out</button>
+    <button class="btn btn-outline-primary " [@inAndOut] (click)="profileUser()">Profile</button>
+  </div>
+  <button class="btn btn-outline-primary pull-right" (click)="registerUser()"
+    *ngIf="logStat == false && route.url == '/login'">Register</button>
+</nav>
